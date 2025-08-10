@@ -1,0 +1,439 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --body-background-color: #fff;
+  --primary-color: #55ae7b;
+  --border-color: #d8e0e6;
+  --font-color: #141a1f;
+  --light-primary-color: #C8E5D5;
+  --footer-background-color: #141a1f;
+  --icons-background-color: #c8e5d530;
+  --button-background-color: #f3f5f7;
+  --font-family: "Nunito", sans-serif;
+  --swiper-background-color: #f2f5f7;
+  --button-border-color: #8ba2b3;
+  /* --cart-button-bg: #55ae7b26; */
+  --bs-body-bg: #fff;
+  --shimmer-highlight-color: #dddddd;
+  --brand-bg-color: #F2F5F7;
+  --category-card-bg: #fff;
+  --nav-button-bg: #8BA2B3;
+}
+
+.dark {
+  --nav-button-bg: #fff;
+  --category-card-bg: #000;
+  --body-background-color: #141414;
+  --button-background-color: #141414;
+  --primary-color: #55ae7b;
+  --sub-text-color: #8b8b8b;
+  --second-cards-color: #202934;
+  --text-field-color: white;
+  --gray-hover-color: #dcdcdc;
+  --container-bg: #f2f3f9;
+  --font-color: white;
+  --button-border-color: #8ba2b3;
+  --bs-body-bg: #212529;
+  --swiper-background-color: #292F34;
+  --border-color: #4a4949;
+  --shimmer-highlight-color: #363e48;
+  --brand-bg-color: #40454A;
+}
+
+/* .container {
+  @apply border border-red-500 border-2;
+} */
+
+* {
+  font-family: var(--font-family);
+}
+
+@layer utilities {
+  .textBackground {
+    background-color: var(--font-color);
+  }
+
+  .categoryCardBackground {
+    background-color: var(--category-card-bg);
+  }
+
+  .swiperNavButtonColor {
+    color: var(--nav-button-bg);
+  }
+
+  .swiperBorderColor {
+    border: 1px solid var(--nav-button-bg);
+  }
+
+
+  .headerBackgroundColor {
+    background-color: var(--bs-body-bg);
+  }
+
+  .brandBackgroundColor {
+    background-color: var(--brand-bg-color);
+  }
+
+  .bodyBackgroundColor {
+    background-color: var(--body-background-color);
+  }
+
+  .primaryFilledColor {
+    fill: var(--primary-color);
+  }
+
+  .primaryBackColor {
+    background-color: var(--primary-color);
+  }
+
+  .cartButtonBackground {
+    background-color: var(--cart-button-bg);
+  }
+
+  .primaryBorder {
+    border: 1px solid var(--primary-color);
+  }
+
+  .primaryColorBorder {
+    border-color: var(--primary-color);
+  }
+
+
+  .primaryDashedBorder {
+    border: 2px dashed var(--primary-color);
+  }
+
+  .primaryColor {
+    color: var(--primary-color);
+  }
+
+  .iconBackgroundColor {
+    background-color: var(--icons-background-color);
+  }
+
+  .iconsColor {
+    color: var(--primary-color);
+  }
+
+  .bodyTextColor {
+    color: var(--body-background-color);
+  }
+
+  .headerSearch {
+    border-radius: 5px;
+    box-shadow: 0 0 3px gray;
+    height: 50px;
+  }
+
+  .buttonBackground {
+    background-color: var(--button-background-color);
+  }
+
+  .footer {
+    background-color: var(--footer-background-color);
+  }
+
+  .cardBorder {
+    border: 1px solid var(--border-color);
+  }
+
+  .fontColorBorder {
+    border: 1px solid var(--font-color);
+  }
+
+  .textColor {
+    color: var(--font-color);
+  }
+
+  .backgroundColor {
+    background-color: var(--swiper-background-color);
+  }
+
+  .buttonBorder {
+    border: 1px solid var(--button-border-color);
+  }
+
+  .bottomBorder {
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .textPrimaryColor {
+    color: var(--primary-color);
+  }
+
+  .sellerHover {
+    background-color: var(--primary-color);
+    color: #fff;
+  }
+
+  .sellerTransation {
+    transition: color 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
+  }
+
+  .countryHover {
+    border: 1px solid var(--border-color);
+    color: var(--primary-color) !important;
+    outline: var(--secondary-color);
+    transform: none !important;
+  }
+
+  .fontColor {
+    color: var(--font-color);
+  }
+
+  .breadCrumbBg {
+    background-color: var(--swiper-background-color);
+  }
+
+  .addToCartColor {
+    background-color: var(--light-primary-color)
+  }
+
+  .infoContent h1,
+  .infoContent h2,
+  .infoContent h3,
+  .infoContent h4,
+  .infoContent h5,
+  .infoContent h6 {
+    @apply font-bold;
+  }
+
+  .infoContent h1 {
+    @apply text-[40px] leading-[48px];
+  }
+
+  .infoContent h2 {
+    @apply text-[32px] leading-[38px];
+  }
+
+  .infoContent h3 {
+    @apply text-[28px] leading-[34px];
+  }
+
+  .infoContent h4 {
+    @apply text-[24px] leading-[29px];
+  }
+
+  .infoContent h5 {
+    @apply text-[20px] leading-[24px];
+  }
+
+  .infoContent h6 {
+    @apply text-[16px] leading-[19px];
+  }
+
+  /* Toast Margin Responsive */
+  div.toast-container-className {
+    @apply mx-3 my-2 md:mx-0 md:my-0;
+  }
+
+  .swiper-image {
+    border-radius: 12px;
+  }
+
+  .feature-section {
+    @apply py-6 md:py-12 px-2;
+  }
+
+  /* .promotion-image{
+    @apply 
+  } */
+}
+
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.homePageSwiper .swiper-pagination {
+  position: absolute;
+  bottom: 45px !important;
+  color: black;
+  width: fit-content !important;
+  padding: 0 10px !important;
+  margin: 0 auto;
+  left: 45% !important;
+  background-color: #fff !important;
+  border-radius: 4px !important;
+}
+
+.homePageSwiper .swiper-pagination-bullet-active {
+  background-color: var(--primary-color) !important;
+  width: 22px;
+  border-radius: 10px !important;
+}
+
+.category-node svg {
+  margin-left: 10px;
+}
+
+
+
+.react-tel-input .form-control {
+  position: relative;
+  font-size: 16px;
+  letter-spacing: 0.01rem;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+  padding-inline-start: 48px;
+  margin-left: 0;
+  background: #ffffff;
+  border: 1px solid #cacaca;
+  border-radius: 5px;
+  line-height: 25px;
+  height: 44px !important;
+  width: 100% !important;
+  outline: none;
+}
+
+.react-tel-input .selected-flag {
+  padding: 0px 5px 0 8px !important;
+}
+
+.react-tel-input .selected-flag .arrow {
+  right: 20px !important;
+}
+
+.react-loading-skeleton {
+  --base-color: var(--swiper-background-color) !important;
+}
+
+#recaptcha-container {
+  position: absolute !important;
+  z-index: 9999 !important;
+}
+
+.react-tel-input .flag-dropdown {
+  background-color: var(--body-background-color) !important;
+}
+
+.react-tel-input .form-control {
+  background-color: var(--body-background-color) !important;
+}
+
+.otp-container>input {
+  background-color: var(--body-background-color) !important;
+}
+
+.toastContainer {
+  background-color: var(--body-background-color) !important;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: var(--body-background-color) !important;
+}
+
+.react-tel-input .selected-flag:hover,
+.react-tel-input .selected-flag:focus {
+  background: var(--body-background-color) !important;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag {
+  background: var(--body-background-color) !important;
+}
+
+.react-tel-input .country-list .country:hover {
+  background: var(--swiper-background-color) !important;
+}
+
+.react-tel-input .country-list .country.highlight {
+  background-color: var(--bs-body-bg) !important;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-pagination {
+    display: none;
+  }
+}
+
+@layer components {
+  .last-slide .rounded-md {
+    @apply rounded-tr-md rounded-br-md;
+  }
+}
+
+span.react-loading-skeleton {
+  --highlight-color: var(--shimmer-highlight-color) !important;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

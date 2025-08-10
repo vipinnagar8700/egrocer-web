@@ -1,0 +1,60 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Show the current request URI in the response
+    # ErrorDocument 200 "%{REQUEST_URI}"
+    # RewriteRule ^ - [L,R=200]
+    # RewriteRule ^([^/]+)/$ /404.html [L]
+
+
+    # Handle Next.js dynamic routes
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^categories/$ /404.html [L]
+    RewriteRule ^categories/([^/]+)/?$ /categories/[slug].html [L]
+    
+    RewriteRule ^order-detail/$ /order-detail.html [L]
+    RewriteRule ^order-detail/([^/]+)/?$ /order-detail/[orderid].html [L]
+    
+    RewriteRule ^product/$ /products.html [L]
+    RewriteRule ^product/([^/]+)/?$ /product/[slug].html [L]
+    
+    RewriteRule ^profile/orderhistory/$ /profile/orderhistory.html [L]
+    RewriteRule ^profile/orderhistory/([^/]+)/?$ /profile/orderhistory/[orderid].html [L]
+
+    # Handle other static routes
+    RewriteRule ^profile/$ /profile.html [L]
+    RewriteRule ^profile/activeorders$ /profile/activeorders.html [L]
+    RewriteRule ^profile/address$ /profile/address.html [L]
+    RewriteRule ^profile/notifications$ /profile/notifications.html [L]
+    RewriteRule ^profile/orderhistory$ /profile/orderhistory.html [L]
+    RewriteRule ^profile/transaction$ /profile/transaction.html [L]
+    RewriteRule ^profile/wallethistory$ /profile/wallethistory.html [L]
+    RewriteRule ^profile/wishlist$ /profile/wishlist.html [L]
+    RewriteRule ^404$ /404.html [L]
+    RewriteRule ^about-us$ /about-us.html [L]
+    RewriteRule ^applications$ /applications.html [L]
+    RewriteRule ^brands$ /brands.html [L]
+    RewriteRule ^cancellation-policy$ /cancellation-policy.html [L]
+    RewriteRule ^cart$ /cart.html [L]
+    RewriteRule ^checkout$ /checkout.html [L]
+    RewriteRule ^contact-us$ /contact-us.html [L]
+    RewriteRule ^countries$ /countries.html [L]
+    RewriteRule ^faqs$ /faqs.html [L]
+    RewriteRule ^privacy-policy$ /privacy-policy.html [L]
+    RewriteRule ^products$ /products.html [L]
+    RewriteRule ^profile$ /profile.html [L]
+    RewriteRule ^return-and-exchange-policy$ /return-and-exchange-policy.html [L]
+    RewriteRule ^sellers$ /sellers.html [L]
+    RewriteRule ^shipping-policy$ /shipping-policy.html [L]
+    RewriteRule ^terms-and-conditions$ /terms-and-conditions.html [L]
+    RewriteRule ^web-payment-status$ /web-payment-status.html [L]
+
+
+    # Fallback for all other routes to index.html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteRule ^$ /index.html [L] 
+    RewriteRule ^(.*)$ /index.html [L]
+</IfModule>

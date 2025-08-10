@@ -1,0 +1,20 @@
+<svg height="512" width="1024" xmlns="http://www.w3.org/2000/svg">
+    <g class="layer">
+        <title>Layer 1</title>
+        <g id="svg_1" transform="matrix(1.46224 0 0 1.45639 690.117 690.236)">
+            <g id="svg_2">
+                <g id="Fill-17" transform="matrix(17.66 0 0 17.3 59.04 -0.03)">
+                    <path
+                        d="m100.96,-10.17l-0.98,3.62l5.6,-3.64l-3.66,13.75l3.72,0l5.42,-20.31l-10.1,6.58z"
+                        fill="rgb(51,149,255)" fill-rule="evenodd" id="svg_3" stroke-dashoffset="0"
+                        stroke-miterlimit="4" transform="translate(-112.42 -10.64)" />
+                </g>
+                <g id="Fill-19" transform="matrix(17.66 0 0 17.3 -61.91 74.5)">
+                    <path d="m-4.55,125.99l-1.54,5.75l7.63,0l3.12,-11.7l-9.21,5.95"
+                        fill="rgb(7,38,84)" fill-rule="evenodd" id="svg_4" stroke-dashoffset="0"
+                        stroke-miterlimit="4" transform="translate(-6.19 -143.12)" />
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
